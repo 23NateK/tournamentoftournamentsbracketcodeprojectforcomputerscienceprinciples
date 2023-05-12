@@ -12,12 +12,13 @@ from tkinter import *
 
 def addFile():
   if re.search(".txt",pathenterer):
-    continue
+    while True:
+      continue
   pathsLists.insert(END,'\n'+str(pathenterer))
   pathsList.add(str(pathenterer))
   
 def removeFile():
-  
+  print("es")
 def exportFiles():
   print("yes")
 
