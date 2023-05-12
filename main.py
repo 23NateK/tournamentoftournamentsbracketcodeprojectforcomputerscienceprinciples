@@ -11,7 +11,7 @@ from tkinter import *
 
 
 def addFile():
-  if pathenterer.contains(".txt"):
+  if re.search(".txt",pathenterer):
     continue
   pathsLists.insert(END,'\n'+str(pathenterer))
   pathsList.add(str(pathenterer))
