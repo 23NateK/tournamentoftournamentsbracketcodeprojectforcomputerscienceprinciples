@@ -11,8 +11,9 @@ pathsList = []
 
 
 def addFile():
-  pathsLists.insert(END,'\n'+str(pathenterer.get()))
   pathsList.append(str(pathenterer.get()))
+  for i in range(0,len(pathsList)-1)
+    pathsLists.insert(END,'\n'+str(pathsList[i]))
   
 def removeFile():
   print("es")
@@ -29,9 +30,9 @@ exportbutton = Button(screen,text="ExportFiles",command=exportFiles)
 exportlabel = Label(screen)
 pathsLists = Text(screen)
 fileadder.grid(row=0,column=0)
-pathenterer.grid(row=1,column=0)
-fileremover.grid(row=0,column=1)
-exportbutton.grid(row=0,column=2)
-exportlabel.grid(row=1,column=1)
-pathsLists.grid(row=1,column=2)
+pathenterer.grid(row=0,column=0)
+fileremover.grid(row=1,column=0)
+exportbutton.grid(row=2,column=0)
+exportlabel.grid(row=2,column=1)
+pathsLists.grid(row=1,column=1)
 screen.mainloop()
