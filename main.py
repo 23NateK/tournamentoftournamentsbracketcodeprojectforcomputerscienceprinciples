@@ -7,7 +7,7 @@
 #
 
 from tkinter import *
-
+pathsList = []
 
 
 def addFile():
@@ -35,4 +35,3 @@ exportbutton.grid(row=0,column=2)
 exportlabel.grid(row=1,column=1)
 pathsLists.grid(row=1,column=2)
 screen.mainloop()
-pathsList = []
