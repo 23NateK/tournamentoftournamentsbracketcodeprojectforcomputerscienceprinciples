@@ -11,8 +11,8 @@ pathsList = []
 
 
 def addFile():
-  pathsLists.insert(END,'\n'+str(pathenterer))
-  pathsList.add(str(pathenterer))
+  pathsLists.insert(END,'\n'+str(pathenterer.get()))
+  pathsList.append(str(pathenterer.get()))
   
 def removeFile():
   print("es")
