@@ -12,7 +12,7 @@ pathsList = []
 
 def addFile():
   pathsList.append(str(pathenterer.get()))
-  pathsLists.clear()
+  pathsLists.config(text="")
   for i in range(0,len(pathsList)-1):
     pathsLists.insert(END,'\n'+str(pathsList[i]))
   
@@ -34,9 +34,9 @@ exportbutton = Button(screen,text="ExportFiles",command=exportFiles)
 exportlabel = Label(screen)
 pathsLists = Text(screen)
 fileadder.grid(row=0,column=0)
-pathenterer.grid(row=0,column=0)
-fileremover.grid(row=1,column=0)
-exportbutton.grid(row=2,column=0)
+pathenterer.grid(row=1,column=0)
+fileremover.grid(row=2,column=0)
+exportbutton.grid(row=3,column=0)
 exportlabel.grid(row=2,column=1)
 pathsLists.grid(row=1,column=1)
 screen.mainloop()
