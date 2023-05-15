@@ -6,6 +6,7 @@
 #export dispblay labl
 #
 
+import Competitor
 from tkinter import *
 pathsList = []
 
@@ -22,7 +23,11 @@ def removeFile():
   for i in range(0,len(pathsList)-1):
     pathsLists.insert(END,'\n'+str(pathsList[i]))
 def exportFiles():
-  print("yes")
+  for i in pathslist:
+    text = open(i,'r')
+    readables = text.readline()
+    
+  
 
 screen = Tk()
 screen.geometry("500x500")
