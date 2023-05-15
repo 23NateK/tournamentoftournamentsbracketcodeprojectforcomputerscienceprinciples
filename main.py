@@ -26,10 +26,14 @@ def exportFiles():
   competitorList = []
   for i in pathslist:
     text = open(i,'r')
-    
+    #make the code here to create an object named "person" that interprets the text file's name and subclass
     readables = text.readlines() #this returns a list with each row in the file being an object in that list
-    for z in range(3,13,2):
-      for y in z:
+    line = 0
+    for z in range(2,12,2):
+      
+      for y in readables[z]:
+        
+      line += 1
     
   
 
