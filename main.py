@@ -23,9 +23,13 @@ def removeFile():
   for i in range(0,len(pathsList)-1):
     pathsLists.insert(END,'\n'+str(pathsList[i]))
 def exportFiles():
+  competitorList = []
   for i in pathslist:
     text = open(i,'r')
-    readables = text.readline()
+    
+    readables = text.readlines() #this returns a list with each row in the file being an object in that list
+    for z in range(3,13,2):
+      for y in z:
     
   
 
