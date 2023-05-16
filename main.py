@@ -14,14 +14,14 @@ Noahsdownfall = []
 def addFile():
   Noahsdownfall.append(str(pathenterer.get()))
   pathsLists.config(text="")
-  for i in range(0,len(pathsList)-1):
-    pathsLists.insert(END,'\n'+str(pathsList[i]))
+  for i in range(0,len(Noahsdownfall)-1):
+    pathsLists.insert(END,'\n'+str(Noahsdownfall[i]))
   
 def removeFile():
-  Noahsdownfall.pop(len(pathsList)-1)
+  Noahsdownfall.pop(len(Noahsdownfall)-1)
   pathsLists.clear()
-  for i in range(0,len(pathsList)-1):
-    pathsLists.insert(END,'\n'+str(pathsList[i]))
+  for i in range(0,len(Noahsdownfall)-1):
+    pathsLists.insert(END,'\n'+str(Noahsdownfall[i]))
 def exportFiles():
   competitorList = []
   for i in Noahsdownfall:
