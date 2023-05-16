@@ -13,7 +13,7 @@ def exportFile(competitorList, outputFile):
 
     i = 0 # index
     while i < len(competitorList):
-        file.write('{0}, {1}, {2}\n'.format(i, competitorList[i].getName(), competitorList[i].getScore()))
+        file.write('{0}, {1}, {2}\n'.format(i + 1, competitorList[i].getName(), competitorList[i].getScore()))
 
         i += 1
 

@@ -7,6 +7,7 @@
 #
 
 import Competitor
+from exportSystem import exportFile
 from tkinter import *
 Noahsdownfall = []
 key = ''
@@ -17,21 +18,21 @@ def addFile():
   pathsLists.config(text="")
   for i in range(0,len(Noahsdownfall)-1):
     pathsLists.insert(END,'\n'+str(Noahsdownfall[i]))
-  
+
 def removeFile():
   Noahsdownfall.pop(len(Noahsdownfall)-1)
   pathsLists.clear()
   for i in range(0,len(Noahsdownfall)-1):
     pathsLists.insert(END,'\n'+str(Noahsdownfall[i]))
-    
+
 def addKey():
   key = str(pathenterer.get())
   keyLabel.config(text = key)
-  
+
 def removeKey():
   key = ''
   keyLabel.config(text = key)
-  
+
 
 screen = Tk()
 rmKey = Button(screen, text = "Remove key", command = removeKey)
@@ -50,7 +51,7 @@ screen.title("The Tournaments of Tournaments")
 fileadder = Button(screen,text="Add grading path",command=addFile)
 fileremover = Button(screen,text="Remove Last",command=removeFile)
 pathenterer = Entry(screen)
-exportbutton = Button(screen,text="ExportFiles",command=exportFiles)
+exportbutton = Button(screen,text="ExportFiles",command=exportFile)
 exportlabel = Label(screen)
 pathsLists = Text(screen)
 fileadder.grid(row=0,column=0)
