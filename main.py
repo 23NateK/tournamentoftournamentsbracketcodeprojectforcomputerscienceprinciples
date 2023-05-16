@@ -9,6 +9,7 @@
 import Competitor
 from tkinter import *
 Noahsdownfall = []
+key = ''
 
 
 def addFile():
@@ -22,25 +23,24 @@ def removeFile():
   pathsLists.clear()
   for i in range(0,len(Noahsdownfall)-1):
     pathsLists.insert(END,'\n'+str(Noahsdownfall[i]))
-def exportFiles():
-  competitorList = []
-  for i in Noahsdownfall:
-    text = open(i,'r')
-    #make the code here to create an object named "person" that interprets the text file's name and subclass
-    readables = text.readlines() #this returns a list with each row in the file being an object in that list
-    line = 0
-    for z in range(2,12,2):
-      
-      
-        
-      line += 1
+    
+def addKey():
+  key = str(pathenterer.get())
+  
     
   
 
 screen = Tk()
+keyLabelIdentifier = Label(screen).config(text="Key:")
+keyLabelIdentifier.grid(row=1, column = 1)
+TBG = Label(screen).config(text="To be graded:")
+TBG.grid(row = 3, column = 1)
+addKey = Button(screen, text = "Add key path", command = addKey)
+addKey.grid(row=0, column=1)
+keyLabel = Label(screen)
 screen.geometry("500x500")
 screen.title("The Tournaments of Tournaments")
-fileadder = Button(screen,text="Add",command=addFile)
+fileadder = Button(screen,text="Add grading path",command=addFile)
 fileremover = Button(screen,text="Remove Last",command=removeFile)
 pathenterer = Entry(screen)
 exportbutton = Button(screen,text="ExportFiles",command=exportFiles)
@@ -51,5 +51,5 @@ pathenterer.grid(row=1,column=0)
 fileremover.grid(row=2,column=0)
 exportbutton.grid(row=3,column=0)
 exportlabel.grid(row=2,column=1)
-pathsLists.grid(row=1,column=1)
+pathsLists.grid(row=4,column=1)
 screen.mainloop()
