@@ -2,11 +2,9 @@ class Competitor(object):
     # represents a competitor
     # stores the competitor's:
     #   name
-    #   classification (teacher or student)
     #   score
     def __init__(self, name, score = 0):
-        # creates a competitor with the given name,
-        # classification, and score
+        # creates a competitor with the given name and score
         self.name = name
         self.score = score
 
