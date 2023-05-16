@@ -24,7 +24,7 @@ def removeFile():
     pathsLists.insert(END,'\n'+str(pathsList[i]))
 def exportFiles():
   competitorList = []
-  for i in pathslist:
+  for i in pathListLabel:
     text = open(i,'r')
     #make the code here to create an object named "person" that interprets the text file's name and subclass
     readables = text.readlines() #this returns a list with each row in the file being an object in that list
