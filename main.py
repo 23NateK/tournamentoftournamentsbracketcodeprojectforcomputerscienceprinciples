@@ -26,11 +26,15 @@ def removeFile():
     
 def addKey():
   key = str(pathenterer.get())
+  keyLabel.config(text = key)
   
-    
+def removeKey():
+  key = ''
+  keyLabel.config(text = key)
   
 
 screen = Tk()
+rmKey = Button(screen, text = "Remove key", command = removeKey)
 keyLabelIdentifier = Label(screen).config(text="Key:")
 keyLabelIdentifier.grid(row=1, column = 1)
 TBG = Label(screen).config(text="To be graded:")
