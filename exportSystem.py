@@ -5,3 +5,21 @@ def exportFile(competitorList, outputFile):
 
     # competitorList is a list of competitor objects
     # outputFile is the name of a file to output to
+
+    competitorList.sort(key=lambda x: x.score) # sort competitors by score
+    competitorList.reverse() # reverse the list so the highest scoring competitors are at the start
+
+    file = open(outputFile, 'w') # open the file to write to; if it exists, it will overwrite it
+
+    i = 0 # index
+    while i < len(competitorList):
+        file.write('{0}, {1}, {2}, {3}'
+                   .format(i,
+                           competitorList[i].getName(),
+                           competitorList[i].get(),
+                           competitorList[i].getName(),
+                           ))
+        i += 1
+
+
+    file.close()
