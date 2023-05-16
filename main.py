@@ -8,17 +8,17 @@
 
 import Competitor
 from tkinter import *
-pathsList = []
+pathListLabel = []
 
 
 def addFile():
-  pathsList.append(str(pathenterer.get()))
+  pathListLabel.append(str(pathenterer.get()))
   pathsLists.config(text="")
   for i in range(0,len(pathsList)-1):
     pathsLists.insert(END,'\n'+str(pathsList[i]))
   
 def removeFile():
-  pathsList.pop(len(pathsList)-1)
+  pathListLabel.pop(len(pathsList)-1)
   pathsLists.clear()
   for i in range(0,len(pathsList)-1):
     pathsLists.insert(END,'\n'+str(pathsList[i]))
