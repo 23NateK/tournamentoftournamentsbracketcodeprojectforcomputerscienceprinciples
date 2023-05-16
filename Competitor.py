@@ -4,11 +4,10 @@ class Competitor(object):
     #   name
     #   classification (teacher or student)
     #   score
-    def __init__(self, name, classification, score = 0):
+    def __init__(self, name, score = 0):
         # creates a competitor with the given name,
         # classification, and score
         self.name = name
-        self.classification = classification
         self.score = score
 
     def getName(self):
