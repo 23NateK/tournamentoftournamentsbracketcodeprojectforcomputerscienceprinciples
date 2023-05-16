@@ -18,7 +18,7 @@ def addFile():
     pathsLists.insert(END,'\n'+str(pathsList[i]))
   
 def removeFile():
-  pathsList.pop(len(pathsList)-1))
+  pathsList.pop(len(pathsList)-1)
   pathsLists.clear()
   for i in range(0,len(pathsList)-1):
     pathsLists.insert(END,'\n'+str(pathsList[i]))
@@ -31,7 +31,7 @@ def exportFiles():
     line = 0
     for z in range(2,12,2):
       
-      for y in readables[z]:
+      
         
       line += 1
     
