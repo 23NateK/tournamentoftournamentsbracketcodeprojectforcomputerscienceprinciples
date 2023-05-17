@@ -1,16 +1,17 @@
+import Competitor
+
 def Score(listOfGuesses, key):
-  retList = listOfGuesses
-  for bracket in listOfGuesses:
-    score = 0
-    round = 0
-    roundScore = 1
-    for teir in bracket:
-      round += 1
-      for i in len(guess):
+  retList = []
+  for bracket in listOfGuesses: #bracket tells us which student's bracket we're on
+    score = 0 #score accrued by the student's bracket
+    roundScore = 1 #what each correct answer is worth (is edited per tier)
+    for tierNum in len(bracket)-1:  #teirNum tells us what teir we're on but the first 'teir' is their name
+      for guess in len(bracket[teirNum+1]):
         try:
-          if teir[i+1].upper() == key[round][i+1].upper():
+          if bracket[tierNum][guess].upper() == key[tierNum+1][i].upper():
             score += roundScore
       roundScore = roundScore * 2
-    bracket.append(score)
+      compy = Comp
+    return listOfGuesses
             
           
