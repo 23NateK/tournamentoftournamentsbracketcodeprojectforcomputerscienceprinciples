@@ -9,6 +9,6 @@ def importResponse(responseFile):
     response.append(lines[0]) # append the name to the response
 
     for i in range(2, 13, 2): # loop through the lines with answers
-        response.append(lines[i].split(', '))
+        response.append([item.strip() for item in lines[i].split(',')])
 
     return response
