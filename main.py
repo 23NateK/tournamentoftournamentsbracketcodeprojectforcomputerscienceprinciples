@@ -32,6 +32,13 @@ def addKey():
 def removeKey():
   key = ''
   keyLabel.config(text = key)
+  
+def exportProcess():
+  brackets = []
+  for i in Noahsdownfall:
+    brackets.append(importResponse(i))
+  exportSystem(Score(brackets, key))
+  
 
 
 screen = Tk()
@@ -51,7 +58,7 @@ screen.title("The Tournaments of Tournaments")
 fileadder = Button(screen,text="Add grading path",command=addFile)
 fileremover = Button(screen,text="Remove Last",command=removeFile)
 pathenterer = Entry(screen)
-exportbutton = Button(screen,text="ExportFiles",command=exportFile)
+exportbutton = Button(screen,text="ExportFiles",command=exportProcess)
 exportlabel = Label(screen)
 pathsLists = Text(screen)
 fileadder.grid(row=0,column=0)
