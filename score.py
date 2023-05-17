@@ -11,7 +11,8 @@ def Score(listOfGuesses, key):
           if bracket[tierNum][guess].upper() == key[tierNum+1][i].upper():
             score += roundScore
       roundScore = roundScore * 2
-      compy = Comp
+      compy = Competitor(bracket[0], score)
+      reList.append(compy)
     return listOfGuesses
             
           
