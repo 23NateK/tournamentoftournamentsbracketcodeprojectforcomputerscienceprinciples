@@ -37,7 +37,7 @@ def exportProcess():
   brackets = []
   for i in Noahsdownfall:
     brackets.append(importResponse(i))
-  exportSystem(Score(brackets, key))
+  exportFile(Score(brackets, key))
   
 
 
