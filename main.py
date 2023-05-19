@@ -8,6 +8,8 @@
 
 import Competitor
 from exportSystem import exportFile
+from importResponse import importResponse
+from score import score
 from tkinter import *
 Noahsdownfall = []
 key = ''
@@ -32,13 +34,13 @@ def addKey():
 def removeKey():
   key = ''
   keyLabel.config(text = key)
-  
+
 def exportProcess():
   brackets = []
   for i in Noahsdownfall:
     brackets.append(importResponse(i))
-  exportFile(Score(brackets, key))
-  
+  exportFile(score(brackets, key), 'results.txt')
+
 
 
 screen = Tk()
