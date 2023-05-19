@@ -15,13 +15,13 @@ key = ''
 
 def addFile():
   Noahsdownfall.append(str(pathenterer.get()))
-  pathsLists.config(text="")
+  pathsLists.delete('1.0', 'end')
   for i in range(0,len(Noahsdownfall)-1):
     pathsLists.insert(END,'\n'+str(Noahsdownfall[i]))
 
 def removeFile():
   Noahsdownfall.pop(len(Noahsdownfall)-1)
-  pathsLists.clear()
+  pathsLists.delete('1.0', 'end')
   for i in range(0,len(Noahsdownfall)-1):
     pathsLists.insert(END,'\n'+str(Noahsdownfall[i]))
 
@@ -43,6 +43,7 @@ def exportProcess():
 
 screen = Tk()
 rmKey = Button(screen, text = "Remove key", command = removeKey)
+pathsLists = Text(screen)
 keyLabelIdentifier = Label(screen)
 keyLabelIdentifier.config(text = "Key:")
 keyLabelIdentifier.grid(row=1, column = 1)
@@ -60,7 +61,6 @@ fileremover = Button(screen,text="Remove Last",command=removeFile)
 pathenterer = Entry(screen)
 exportbutton = Button(screen,text="ExportFiles",command=exportProcess)
 exportlabel = Label(screen)
-pathsLists = Text(screen)
 fileadder.grid(row=0,column=0)
 pathenterer.grid(row=1,column=0)
 fileremover.grid(row=2,column=0)
