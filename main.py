@@ -12,7 +12,7 @@ from importResponse import importResponse
 from score import score
 from tkinter import *
 Noahsdownfall = []
-key = ''
+key = []
 
 
 def addFile():
@@ -28,8 +28,9 @@ def removeFile():
     pathsLists.insert(END,'\n'+str(Noahsdownfall[i]))
 
 def addKey():
-  key = str(pathenterer.get())
-  keyLabel.config(text = key)
+  path = str(pathenterer.get())
+  key.append(importResponse(path))
+  keyLabel.config(text = path)
 
 def removeKey():
   key = ''
@@ -39,7 +40,7 @@ def exportProcess():
   brackets = []
   for i in Noahsdownfall:
     brackets.append(importResponse(i))
-  exportFile(score(brackets, key), 'results.txt')
+  exportFile(score(brackets, key[-1]), 'results.txt')
 
 
 
