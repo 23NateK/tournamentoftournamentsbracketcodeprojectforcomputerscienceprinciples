@@ -16,27 +16,32 @@ key = []
 
 
 def addFile():
+  # add a file to the list of responses to be graded
   Noahsdownfall.append(str(pathenterer.get()))
   pathsLists.delete('1.0', 'end')
   for i in range(0,len(Noahsdownfall)-1):
     pathsLists.insert(END,'\n'+str(Noahsdownfall[i]))
 
 def removeFile():
+  # remove the last file added to the list
   Noahsdownfall.pop(len(Noahsdownfall)-1)
   pathsLists.delete('1.0', 'end')
   for i in range(0,len(Noahsdownfall)-1):
     pathsLists.insert(END,'\n'+str(Noahsdownfall[i]))
 
 def addKey():
+  # add the grading key
   path = str(pathenterer.get())
   key.append(importResponse(path))
   keyLabel.config(text = path)
 
 def removeKey():
+  # removes the grading key
   key = ''
   keyLabel.config(text = key)
 
 def exportProcess():
+  # grades and returns a text file ('./results.txt') with the results
   brackets = []
   for i in Noahsdownfall:
     brackets.append(importResponse(i))
@@ -62,7 +67,7 @@ screen.title("The Tournaments of Tournaments")
 fileadder = Button(screen,text="Add grading path",command=addFile)
 fileremover = Button(screen,text="Remove Last",command=removeFile)
 pathenterer = Entry(screen)
-exportbutton = Button(screen,text="ExportFiles",command=exportProcess)
+exportbutton = Button(screen,text="Export Files",command=exportProcess)
 exportlabel = Label(screen)
 fileadder.grid(row=0,column=0)
 pathenterer.grid(row=1,column=0)

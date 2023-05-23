@@ -3,6 +3,7 @@ class Competitor(object):
     # stores the competitor's:
     #   name
     #   score
+
     def __init__(self, name, score = 0):
         # creates a competitor with the given name and score
         self.name = name

@@ -1,6 +1,9 @@
 from Competitor import Competitor
 
 def score(listOfGuesses, key):
+  # score each competitor in listOfGuesses with the key
+  # returns a list of competitor objects with their scores
+
   retList = []
   tierScore = [1, 2, 4, 6, 8, 10] # score for current round
   for bracket in listOfGuesses: #bracket tells us which student's bracket we're on
