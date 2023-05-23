@@ -1,0 +1,13 @@
+Name
+Round 1(1pt):
+Red, orange, purple, blue, white, magenta, cyan, apple ,are, green, fanivoe, ieaonve, vniaoen, vniaov, nviaov, vniaon, q, w, e, r, t, y, u, i, o, p, a, s, d, f, g, h
+Round 2(2pt):
+Red, orange, purple, blue, white, magenta, cyan, apple, are, green, fanivoe, ieaonve, vniaoen, vniaov, nviaov, vniaon
+Round 3(4pt):
+Red, orange, blue, purple, blue, white, magenta, cyan
+Round 4(6pt):
+Red, orange, blue, purple
+Round 5(8pt):
+Orange, red
+Round 6(10pt):
+red
